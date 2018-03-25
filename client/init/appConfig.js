@@ -1,4 +1,4 @@
 Meteor.App = {
-    NAME: 'Meteor',
-    DESCRIPTION: 'A Meteor Boilerplate created by the Australian Research Lab'
+    NAME: 'Deakin Meteor',
+    DESCRIPTION: 'A Meteor Boilerplate by the Deakin'
 };

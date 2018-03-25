@@ -1,4 +1,4 @@
-import 'openlayers/dist/ol.css';
+//import 'openlayers/dist/ol.css';
 
 /**
  * Client Initialization. When the client has loaded all the resources, execute this.
