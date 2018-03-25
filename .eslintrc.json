@@ -1,0 +1,8 @@
+{
+  "plugins": ["meteor"],
+  "extends": ["airbnb", "plugin:meteor/recommended"],
+  "rules": {
+  	"no-param-reassign": 0,
+  	"indent": 0
+  }
+}

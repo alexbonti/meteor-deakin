@@ -1,0 +1,201 @@
+@import "variables";
+
+@font-face {
+  font-family: HelveticaNeue;
+  src: url("fonts/helveticaneue-webfont.ttf");
+}
+
+@font-face {
+  font-family: HelveticaNeue;
+  src: url("fonts/helvneueforibm-bold-webfont.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: HelveticaNeueLight;
+  src: url("fonts/helvneueforibm-light-webfont.ttf");
+}
+
+body {
+  font-family: HelveticaNeueLight, Helvetica, sans-serif;
+  background-color: #F2F1F1;
+  color: @darkTextColor;
+  font-size: 16px;
+  letter-spacing: 0.8;
+}
+
+strong {
+  font-family: sans-serif;
+}
+
+.left-pad {
+  padding-left: @sidePad;
+}
+
+.row.no-mar-bot {
+  margin-bottom: 0;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+/*
+ * Use this for form labels of required fields: <label>My Label <span class="required"></span></label> - this will
+ * render a red asterisk next to the label.
+ */
+.required:after {
+  padding-left: 5px;
+  color: #f00;
+  font-weight: bold;
+  content: '*';
+}
+
+// Use on any element
+.full-width {
+  width: 100%;
+}
+
+/*
+ * This is intended to be used for bootstrap col-??-? classes (layout). By default all col-* classes of bootstrap add
+ * a 15px padding left and right. This overwrites this padding
+ */
+.col-no-padding, .no-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/*
+ * This can be used for div's that need to be vertical aligned. Please be aware that display: table changes the
+ * behaviour of sub-elements as well.
+ */
+div.middle {
+  display: table;
+  vertical-align: middle;
+}
+
+// Can be used as an alternative to button.btn-danger
+button.error {
+  background-color: #A00;
+  color: #fff;
+}
+
+// Generic error class to change the text color to red.
+div.error,
+p.error,
+span.error {
+  color: #f00;
+}
+
+// Styling for different headings
+h1 {
+  font-style: 30px;
+  letter-spacing: 0.66px;
+}
+
+h2 {
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+h3 {
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+h4 {
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+h5 {
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  color: @whiteColor;
+}
+
+h5, h6 {
+  font-family: HelveticaNeue;
+  text-transform: uppercase;
+}
+
+/*
+ * Draws a 15x15 px square with a border. The background color should be determined by other classes.
+ * E.g. <span class="square square-red"> and then .square-red just specifies the background-color: #a00;
+ */
+.square {
+  padding-left: 15px;
+  margin-right: 5px;
+  height: 15px;
+  border: 1px solid @greyColor;
+}
+
+/*
+ * If a button has a font-awesome icon in it, leave a 5px space to the right of the icon (@)
+ *
+ * Button:  ------------
+ *         |   @ text   |
+ *          ------------
+ */
+button span.fa {
+  padding-right: 5px;
+}
+
+/*
+ * Form elements: show a red border around form elements with an error class.
+ */
+input.error,
+select.error,
+textarea.error {
+  border: 1px solid #f00;
+}
+
+/*
+ * Add this class to a DOM object where you change CSS properties via events and want the transition to be smooth.
+ */
+.ease {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+/*
+ *  Transition effects
+ * These effects are added to the router to an area known as mainContent where the yield happens and we want a less hard transition
+ */
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 0.6s;
+  animation-duration: 0.6s;
+}

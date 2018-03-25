@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - "6"
+before_install:
+  - npm install -g eslint eslint-config-airbnb eslint-plugin-jsx-a11y eslint-plugin-import eslint-plugin-react eslint-config-airbnb-base
+script:
+  - echo "Starting travis"
+  - sh private/travis/deploy.sh
+branches:
+  only:
+    - master
